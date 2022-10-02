@@ -9,6 +9,8 @@ import com.villa.resident.repository.ResidentRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
+import org.springframework.test.util.ReflectionTestUtils;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -31,7 +33,9 @@ public class ResidentServiceTest {
     public void init() {
         residentRepository = Mockito.mock(ResidentRepository.class);
 
-        residentService = new ResidentServiceImpl(residentRepository);
+        residentService = new ResidentServiceImpl();
+
+        ReflectionTestUtils.setField(residentService, "residentRepository", residentRepository);
     }
 
     @Test

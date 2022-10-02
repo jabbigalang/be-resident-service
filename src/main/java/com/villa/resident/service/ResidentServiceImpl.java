@@ -8,16 +8,16 @@ import com.villa.resident.model.Resident;
 import com.villa.resident.repository.ResidentRepository;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Optional;
 
 @Component
-@AllArgsConstructor
-@NoArgsConstructor
 public class ResidentServiceImpl implements ResidentService {
 
+    @Autowired
     private ResidentRepository residentRepository;
 
     @Override
