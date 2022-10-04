@@ -1,0 +1,4 @@
+spring:
+  cloud:
+    config:
+      uri: http://svc-villa-config-server:8888
