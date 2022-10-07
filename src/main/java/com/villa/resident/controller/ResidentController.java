@@ -12,6 +12,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/residents")
 @AllArgsConstructor
+@CrossOrigin(origins = "http://localhost:4200")
 public class ResidentController {
     private ResidentService residentService;
 

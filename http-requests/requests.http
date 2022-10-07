@@ -1,0 +1,31 @@
+### Get Residents
+GET {{env_url}}/residents
+
+### Get Resident
+GET {{env_url}}/residents/{{resident_id}}
+
+### Create Resident
+POST {{env_url}}/residents
+Content-Type: application/json
+
+{
+  "firstname": "Chrisen John Abraham Galang",
+  "lastname": "Galang",
+  "birthdate": "1991-06-20",
+  "emailAddress": "chrisen.galang@gmail.com",
+  "mobileNumber": "09289776740",
+  "houseId": "1"
+}
+
+### Update Resident
+PUT {{env_url}}/residents/{{resident_id}}
+Content-Type: application/json
+
+{
+  "firstname": "Chrisen John Abraham",
+  "lastname": "Galang",
+  "birthdate": "1991-06-20",
+  "emailAddress": "chrisen.galang@gmail.com",
+  "mobileNumber": "09289776740",
+  "houseId": "1"
+}
